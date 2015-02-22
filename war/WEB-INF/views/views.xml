@@ -27,4 +27,44 @@
 		<put-attribute name="body" value="/WEB-INF/views/sobre.jsp" />
 	</definition>
 
+		<definition extends="default" name="protocollista">
+		<put-attribute name="body" value="/WEB-INF/views/protocollista.jsp" />
+	</definition>
+	
+	<definition extends="default" name="protocolincluir">
+		<put-attribute name="body" value="/WEB-INF/views/protocolincluir.jsp" />
+	</definition>
+	
+	<definition extends="default" name="protocoleditar">
+		<put-attribute name="body" value="/WEB-INF/views/protocoleditar.jsp" />
+	</definition>
+
+	<definition extends="default" name="clientlista">
+		<put-attribute name="body" value="/WEB-INF/views/clientlista.jsp" />
+	</definition>
+	
+	<definition extends="default" name="clientincluir">
+		<put-attribute name="body" value="/WEB-INF/views/clientincluir.jsp" />
+	</definition>
+	
+	<definition extends="default" name="clienteditar">
+		<put-attribute name="body" value="/WEB-INF/views/clienteditar.jsp" />
+	</definition>	
+
+	<definition extends="default" name="servicelista">
+		<put-attribute name="body" value="/WEB-INF/views/servicelista.jsp" />
+	</definition>
+	
+	<definition extends="default" name="serviceincluir">
+		<put-attribute name="body" value="/WEB-INF/views/serviceincluir.jsp" />
+	</definition>
+	
+	<definition extends="default" name="serviceeditar">
+		<put-attribute name="body" value="/WEB-INF/views/serviceeditar.jsp" />
+	</definition>	
+
+	<definition extends="login" name="notlogged">
+		<put-attribute name="body" value="/WEB-INF/views/notlogged.jsp" />
+	</definition>
+			
 </tiles-definitions>

@@ -7,8 +7,6 @@
 	
 	<div style="border-top: 1px solid #E5E5E5; padding-top: 10px">
     	<a href="http://www.yaw.com.br" title="${label_yaw}" target="open">${label_yaw}</a>
-    	| <small>${label_detalhes_projeto}
-    	(<a href="http://www.yaw.com.br/open/projetos/springmvc-gae/" title="${label_saiba_mais}" target="open">${label_saiba_mais}</a>)
-    	</small>
+    	| <small>${label_detalhes_projeto}</small>
     </div>
 </div>

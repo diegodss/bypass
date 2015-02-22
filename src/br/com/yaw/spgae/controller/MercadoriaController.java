@@ -22,6 +22,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
+import com.google.appengine.api.users.User;
+import com.google.appengine.api.users.UserService;
+import com.google.appengine.api.users.UserServiceFactory;
+
 import br.com.yaw.spgae.dao.MercadoriaDAO;
 import br.com.yaw.spgae.model.Mercadoria;
 
@@ -35,7 +39,7 @@ import br.com.yaw.spgae.model.Mercadoria;
  * 
  * @author YaW Tecnologia
  */
-@RequestMapping(value="/")
+@RequestMapping(value="/mercadoria")
 @Controller
 public class MercadoriaController {
 
@@ -45,6 +49,10 @@ public class MercadoriaController {
 	 * Utiliza a injeção de dependência do <code>Spring Framework</code> para resolver a instancia do <code>DAO</code>.
 	 */
 	@Autowired
+
+    
+    
+    
 	private MercadoriaDAO dao;
 	
 	@Autowired @Qualifier("sobreApp") 
@@ -57,8 +65,19 @@ public class MercadoriaController {
 	 */
 	@RequestMapping(method = RequestMethod.GET)
 	public String listar(Model uiModel) {
+
+		UserService userService = UserServiceFactory.getUserService();
+	    User user = userService.getCurrentUser();
+	    String ret ;
+	    if (user != null) {
+	    	ret = "servicelista";
+	    	
+	      }	 else {
+	    	  ret = "notlogged";
+	      }   
+	    
 		uiModel.addAttribute("mercadorias", getDataSource().getAll());
-		return "lista";
+		return ret;
 	}
 	
 	/**

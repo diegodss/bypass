@@ -34,11 +34,11 @@
   		<div class="container">
 	   		<div id="wrapper" class="row-fluid show-grid">
 			    <div class="sidebar">
-			    	<div class="well span2">
+			    	<div class="well span3">
 			    		<tiles:insertAttribute name="menu" ignore="true" />
 			    	</div>
 			    </div>
-			    <div class="span8">
+			    <div class="span9">
 		    		<tiles:insertAttribute name="body"/>
 		    		
 		    		<footer>
